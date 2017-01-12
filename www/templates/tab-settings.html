@@ -1,16 +1,19 @@
 <ion-view view-title="Settings">
 	<ion-content>
 		<ion-list>
-			<ion-toggle	ng-model="settings.visible">
+			<ion-toggle	ng-model="params.visible" ng-change="setVisible()">
 				Visible to Unpaired Devices
 			</ion-toggle>
-			<ion-toggle	ng-model="settings.searching">
+			<ion-toggle	ng-model="params.searching" ng-change="setSearching()">
 				Search for Unpaired Devices
 			</ion-toggle>
 			<label class="item item-input item-stacked-label">
 				<span class="input-label">Your Name:</span>
-				<input type="text" placeholder="John">
+				<input type="text" placeholder="N/A" ng-model="params.name" ng-change="setName()">
 			</label>
+			<button class="button button-full button-assertive" ng-click="clearHistory()">
+				Clear History
+			</button>
 		</ion-list>
 	</ion-content>
 </ion-view>

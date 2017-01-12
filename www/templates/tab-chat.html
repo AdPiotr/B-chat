@@ -5,11 +5,11 @@
 				{{msg.text}}
 			</div>
 		</div>
-		<div class="item item-input-inset">
-			<input type="text" placeholder="Message" ng-model="params.message">
-			<button class="button button-small" ng-click="send()">
-				Send
-			</button>
-		</div>
 	</ion-content>
+	<ion-footer-bar class="chatinput">
+		<input type="text" placeholder="Message" ng-model="params.message">
+		<button class="button button-positive" ng-click="send()">
+			Send
+		</button>
+	</ion-footer-bar>
 </ion-view>
